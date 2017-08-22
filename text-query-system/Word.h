@@ -2,12 +2,14 @@
 #define WORD_H
 
 #include <string>
+
 using namespace std;
 
 // empty classes to represent different exceptions
 class WordContainsNoLetters {};
 class WordContainsSpace {};
 
+//class WordNoQuery {};
 
 class Word
 {
@@ -22,10 +24,14 @@ public:
 	// returns true if queryable, false otherwise
 	// (according to the brief, words less than 3 characters are not queryable)
 	bool isQueryable() const;
+	
+	void WordUpperLowerCase();
+	void RemovePunctuation();
+	void OnlyPunctuation();
+	void CheckNoSpace();
 
 private:	
-	string _word;	
+	string _word;
 };
 
 #endif
-
